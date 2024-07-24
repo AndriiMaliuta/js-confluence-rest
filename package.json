@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node src/tests/index.test",
     "start": "node src/index.js"
   },
   "keywords": [],
   "author": "Andrii Maliuta",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "1.6.0",
     "dotenv": "^10.0.0"
   }
 }

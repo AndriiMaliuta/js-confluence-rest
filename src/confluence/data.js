@@ -1,4 +1,5 @@
-const dotenv = require("dotenv");
+import dotenv from "dotenv";
+
 dotenv.config();
 
 const username = process.env.username;
