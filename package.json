@@ -2,11 +2,10 @@
   "name": "confluence-rest",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/confluence/index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "Andrii Maliuta",
