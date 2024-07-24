@@ -1,6 +1,6 @@
 const axios = require('axios');
 const https = require('https');
-const { authData, CONF_URL } = require('./data')
+const { authData, CONF_URL } = require('./data.js')
 // const readline = require("readline");
 // const rl = readline.createInterface({
 //     input: process.stdin,

@@ -1,3 +1,7 @@
+.idea
+.vscode
+.fleet
+
 # Logs
 logs
 *.log

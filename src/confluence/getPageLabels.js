@@ -1,11 +1,11 @@
 const axios = require("axios");
 const https = require("https");
-const { authData, CONF_URL } = require("./data");
+const { authData, CONF_URL } = require("./data.js");
 
-module.exports = async function getPageChildren(pageId) {
+module.exports = async function getPageLabels(pageId) {
   console.log(">>> Initiating REST request...");
 
-  return await axios.get(`${CONF_URL}/rest/api/content/${pageId}/child/page`, {
+  return axios.get(`${CONF_URL}/rest/api/content/${pageId}/label/`, {
     headers: {
       Authorization: `Basic ${authData}`,
     },

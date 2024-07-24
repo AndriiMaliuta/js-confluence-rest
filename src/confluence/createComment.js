@@ -1,13 +1,19 @@
 const axios = require("axios");
 const https = require("https");
-const { authData, CONF_URL } = require("./data");
+const { authData, CONF_URL } = require("./data.js");
 
-module.exports = async function createPage(space, title, body, parent_id) {
+module.exports = async function createComment(
+  space,
+  title,
+  body,
+  parentId,
+  pageId
+) {
   console.log(">>> Initiating REST request...");
 
   data = {
+    type: "comment",
     title: title,
-    type: "page",
     space: { key: space },
     body: {
       storage: {
@@ -15,10 +21,13 @@ module.exports = async function createPage(space, title, body, parent_id) {
         representation: "storage",
       },
     },
-    ancestors: [{ id: parent_id }],
+    container: {
+      id: pageId,
+      type: "page",
+    },
   };
 
-  return await axios({
+  return await axios.post({
     method: "post",
     url: `${CONF_URL}/rest/api/content`,
     headers: {

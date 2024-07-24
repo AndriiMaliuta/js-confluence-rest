@@ -1,6 +1,6 @@
 const axios = require("axios");
 const https = require("https");
-const { authData, CONF_URL } = require("./data");
+const { authData, CONF_URL } = require("./data.js");
 
 module.exports = async function getSpacePagesByLabel(spaceKey, label) {
   console.log(">>> Initiating REST request...");
