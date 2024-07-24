@@ -1,16 +1,16 @@
-const axios = require("axios");
-const https = require("https");
-const { authData, CONF_URL } = require("./data.js");
+import axios from "axios";
+import https from "https";
+import {authData, CONF_URL} from "./data.js";
 
-module.exports = async function getPageLabels(pageId) {
-  console.log(">>> Initiating REST request...");
+export async function getPageLabels(pageId) {
+    console.log(">>> Initiating REST request...");
 
-  return axios.get(`${CONF_URL}/rest/api/content/${pageId}/label/`, {
-    headers: {
-      Authorization: `Basic ${authData}`,
-    },
-    httpsAgent: new https.Agent({
-      rejectUnauthorized: false,
-    }),
-  });
-};
+    return axios.get(`${CONF_URL}/rest/api/content/${pageId}/label/`, {
+        headers: {
+            Authorization: `Basic ${authData}`,
+        },
+        httpsAgent: new https.Agent({
+            rejectUnauthorized: false,
+        }),
+    });
+}
